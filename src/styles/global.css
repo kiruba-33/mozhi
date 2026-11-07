@@ -1,0 +1,54 @@
+/* Global resets and responsive base styles */
+html {
+  overflow-x: hidden;
+  width: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Custom focus states */
+:focus-visible {
+  outline: 2px solid #7041D8;
+  outline-offset: 2px;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F7F5FC;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D5CDE8;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B69AFB;
+}
+
+/* Button smooth transitions & touch target support */
+button {
+  transition-property: color, background-color, border-color, box-shadow, transform;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  touch-action: manipulation;
+}
+
+/* Prevent auto-zoom on iOS inputs */
+@media (max-width: 639px) {
+  input[type="text"],
+  textarea {
+    font-size: 16px !important;
+  }
+}
